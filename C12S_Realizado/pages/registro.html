@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Formulario II</title>
+</head>
+<body>
+    <header>
+        <div class="descuento-20">
+            <p class="description-20">20% de descuento en todos los productos!</p>
+        </div>
+        <div class="container_logo_titulo">
+            <div class="logo_titulo">
+                <img class="logo" src="/img/logo.svg" alt="Tienda" />
+                <h1 class="titulo">Nombre Tienda</h1>
+            </div>
+        </div>
+        <nav class="menu">
+            <a class="options" href="../index.html">Inicio</a>
+            <a class="options" href="#">Contacto</a>
+            <a class="options" href="/pages/registro.html">Registrarme</a>
+            <a class="options" href="/pages/login.html">Ingresar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container_formulario">
+            <div class="texto_formulario">
+                <h2>Añadí tu super!</h2>
+                <p>Agregá tu personaje favorito completando las opciones.</p>
+            </div>
+            <form action="/registro" method="POST">
+                <div class="formulario">
+                    <div class="formulario_izquierda">
+                        <label for="nombre">*Nombre</label>
+                        <input type="text" id="nombre" name="nombreUsuario" required>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fechaUsuario" required>
+                        <textarea name="descripción" id="description" cols="30" rows="10" placeholder="Descripción" style="resize: none"></textarea>
+                    </div>
+                    <div class="formulario_derecha">
+                        <label>*Especie</label>
+                        <select name="especie">
+                            <option value="" selected>Seleccionar</option>
+                            <option value="humano">Humano</option>
+                            <option value="kriptoniano">Kriptoniano</option>
+                            <option value="extraterrestre">Extraterreste</option>
+                        </select>
+                        <label for="foto">Agregar Foto</label>
+                        <input type="file" name="imagenDeSuper" accept=".jpg, .jpeg, .png">
+                        <fieldset>
+                            <legend>Poderes</legend>
+                            <input type="checkbox" name="poderes" id="volar" value="volar" /><span>Volar</span>
+                            <br />
+                            <input type="checkbox" name="poderes" id="inteligencia" value="inteligencia" /><span>SuperInteligencia</span>
+                            <br />
+                            <input type="checkbox" name="poderes" id="vista" value="vista" /><span>Vista de rayo láser</span>
+                            <br />
+                            <input type="checkbox" name="poderes" id="billetera" value="billetera" /><span>Billetera Gorda</span>
+                        </fieldset>
+                        <hr />
+                        <fieldset>
+                            <legend>Tipo de personaje</legend>
+                            <input type="radio" name="tipo" vakue="heroe" /><span>Héroe / Heroína</span>
+                            <br />
+                            <input type="radio" name="tipo" value="villano" /><span>Villano / Villana</span>
+                        </fieldset>
+                    </div>
+                </div>    
+            <button class="agree" type="submit">Añadir</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Todos los derechos reservados a FRONT END 1</p>
+    </footer>
+</body>
+</html>
